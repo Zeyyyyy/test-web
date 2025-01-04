@@ -1,0 +1,98 @@
+/* Import the Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f0ff;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6a0dad;
+    color: white;
+    padding: 1em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d1c4e9;
+}
+
+#chatbot {
+    margin: 2em auto;
+    padding: 2em;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+#chat-window {
+    border: 1px solid #ddd;
+    padding: 1em;
+    height: 300px;
+    overflow-y: scroll;
+    background-color: #f0f0f0;
+    margin-bottom: 1em;
+}
+
+#user-input {
+    width: 70%;
+    padding: 0.5em;
+    margin: 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#send-btn {
+    padding: 0.5em 1em;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 1em;
+    transition: background-color 0.3s;
+}
+
+#send-btn:hover {
+    background-color: #8e44ad;
+}
+
+footer {
+    background-color: #6a0dad;
+    color: white;
+    padding: 2em 0;
+    margin-top: 2em;
+}
+
+footer h2 {
+    margin-top: 0;
+}
+
+footer p {
+    max-width: 600px;
+    margin: 0 auto;
+}
