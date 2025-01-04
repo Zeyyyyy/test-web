@@ -1,8 +1,8 @@
-/* Import the Poppins font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* Import the Poppins and Roboto fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap');
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f3f0ff;
     color: #333;
     text-align: center;
@@ -37,6 +37,11 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #d1c4e9;
+}
+
+#home {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 #chatbot {
@@ -84,6 +89,7 @@ nav ul li a:hover {
     cursor: pointer;
     border-radius: 5px;
     margin-left: 1em;
+    font-family: 'Poppins', sans-serif;
     transition: background-color 0.3s;
 }
 
@@ -119,6 +125,8 @@ footer {
 
 footer h2 {
     margin-top: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 footer p {
