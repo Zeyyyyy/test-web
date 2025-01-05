@@ -1,84 +1,215 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Cooking Partner</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1><a href="#">AI Cooking Partner</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Discover Recipes</a></li>
-                    <li><a href="#">Create Recipes</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+:root {
+    --primary-color: #442266; /* Dark purple */
+    --secondary-color: #663399; /* Slightly lighter purple */
+    --accent-color: #800080; /* Brighter purple */
+    --background-color: #121212; /* Very dark gray */
+    --text-color: #eee; /* Light gray */
+    --font-family: 'Poppins', sans-serif; /* Modern font */
+}
 
-    <section class="hero">
-        <div class="container">
-            <h2>Unlock the Potential of AI Food</h2>
-            <p>Your personal AI-powered cooking assistant for delicious and innovative recipes.</p>
-        </div>
-    </section>
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
-    <section class="chat-section">
-        <div class="container">
-            <div class="chat-container">
-                <div class="chat-header">
-                    <h2>AI Cooking Chat</h2>
-                </div>
-                <div class="chat-log" id="chatLog">
-                </div>
-                <div class="chat-input">
-                    <input type="text" id="userInput" placeholder="Ask me anything about cooking...">
-                    <button id="sendButton">Send</button>
-                </div>
-            </div>
-        </div>
-    </section>
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
 
-    <section class="features">
-        <div class="container">
-            <h2>Features</h2>
-            <div class="feature-grid">
-                <div class="feature">
-                    <img src="https://via.placeholder.com/150x150/442266/FFFFFF?text=Icon" alt="Feature Icon">
-                    <h3>Discover Recipes</h3>
-                    <p>Explore hundreds of AI-generated recipes.</p>
-                </div>
-                <div class="feature">
-                    <img src="https://via.placeholder.com/150x150/442266/FFFFFF?text=Icon" alt="Feature Icon">
-                    <h3>Create Recipes</h3>
-                    <p>Craft your own unique recipes with AI assistance.</p>
-                </div>
-                <div class="feature">
-                    <img src="https://via.placeholder.com/150x150/442266/FFFFFF?text=Icon" alt="Feature Icon">
-                    <h3>Generate from Photo</h3>
-                    <p>Upload a photo and let the AI create a recipe for you.</p>
-                </div>
-                <div class="feature">
-                    <img src="https://via.placeholder.com/150x150/442266/FFFFFF?text=Icon" alt="Feature Icon">
-                    <h3>Full Menus</h3>
-                    <p>Design full culinary experiences for any event.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-    <footer>
-        <div class="container">
-            <p>© 2023 AI Cooking Partner</p>
-        </div>
-    </footer>
+header {
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    border-bottom: 3px solid var(--accent-color);
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    font-size: 1.1em;
+}
+
+.hero {
+    background-color: var(--secondary-color);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.chat-section {
+    flex: 1;
+    padding: 50px 0;
+}
+
+.chat-container {
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.chat-header {
+    background-color: var(--primary-color);
+    padding: 15px;
+    border-bottom: 1px solid var(--accent-color);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chat-header h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+
+.chat-log {
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    line-height: 1.4;
+}
+
+.user-message {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: right;
+    margin-left: 20%;
+}
+
+.ai-message {
+    background-color: #333;
+    color: var(--text-color);
+    margin-right: 20%;
+}
+
+.chat-input {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #333;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #333;
+    color: var(--text-color);
+}
+
+.chat-input button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+    background-color: var(--primary-color);
+}
+
+.features {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature {
+    background-color: var(--secondary-color);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.feature img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.feature p {
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+    border-top: 3px solid var(--accent-color);
+    margin-top: auto;
+}
