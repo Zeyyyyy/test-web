@@ -3,40 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cooking Buddy</title>
+    <title>AI Cooking Partner</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#chat">Chat</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
-        <h1 id="home">Welcome to Your Cooking Buddy</h1>
-    </header>
-    <main>
-        <section id="chatbot">
-            <h2 id="chat">Chat with Your Cooking Buddy</h2>
-            <div id="chat-window"></div>
-            <div class="input-group">
-                <input type="text" id="user-input" placeholder="What do you want to cook?">
-                <input type="file" id="image-upload" accept="image/*">
-                <button id="send-btn">Send</button>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>AI Cooking Partner</h2>
+        </div>
+        <div class="chat-log" id="chatLog">
             </div>
-            <div class="voice-input">
-                <button id="start-record-btn">Start Recording</button>
-                <button id="stop-record-btn">Stop Recording</button>
-            </div>
-        </section>
-    </main>
-    <footer id="about">
-        <h2>About Cooking Buddy</h2>
-        <p>Your Cooking Buddy is here to help you create delicious meals with ease. Whether you have specific ingredients or dietary preferences, our AI-powered chatbot is designed to assist you in the kitchen.</p>
-    </footer>
-    <script src="scripts.js"></script>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Ask me anything about cooking...">
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
