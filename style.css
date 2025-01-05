@@ -1,79 +1,84 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Cooking Partner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="#">AI Cooking Partner</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Discover Recipes</a></li>
+                    <li><a href="#">Create Recipes</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-.chat-container {
-    width: 80%;
-    max-width: 500px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+    <section class="hero">
+        <div class="container">
+            <h2>Unlock the Potential of AI Food</h2>
+            <p>Your personal AI-powered cooking assistant for delicious and innovative recipes.</p>
+        </div>
+    </section>
 
-.chat-header {
-    background-color: #f0f0f0;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
+    <section class="chat-section">
+        <div class="container">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>AI Cooking Chat</h2>
+                </div>
+                <div class="chat-log" id="chatLog">
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="userInput" placeholder="Ask me anything about cooking...">
+                    <button id="sendButton">Send</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.chat-header h2 {
-    margin: 0;
-    font-size: 1.2em;
-}
+    <section class="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <img src="https://via.placeholder.com/150x150/442266/FFFFFF?text=Icon" alt="Feature Icon">
+                    <h3>Discover Recipes</h3>
+                    <p>Explore hundreds of AI-generated recipes.</p>
+                </div>
+                <div class="feature">
+                    <img src="https://via.placeholder.com/150x150/442266/FFFFFF?text=Icon" alt="Feature Icon">
+                    <h3>Create Recipes</h3>
+                    <p>Craft your own unique recipes with AI assistance.</p>
+                </div>
+                <div class="feature">
+                    <img src="https://via.placeholder.com/150x150/442266/FFFFFF?text=Icon" alt="Feature Icon">
+                    <h3>Generate from Photo</h3>
+                    <p>Upload a photo and let the AI create a recipe for you.</p>
+                </div>
+                <div class="feature">
+                    <img src="https://via.placeholder.com/150x150/442266/FFFFFF?text=Icon" alt="Feature Icon">
+                    <h3>Full Menus</h3>
+                    <p>Design full culinary experiences for any event.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.chat-log {
-    padding: 15px;
-    height: 300px;
-    overflow-y: auto;
-}
+    <footer>
+        <div class="container">
+            <p>© 2023 AI Cooking Partner</p>
+        </div>
+    </footer>
 
-.message {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.user-message {
-    background-color: #e0f0e0;
-    text-align: right;
-}
-
-.ai-message {
-    background-color: #f0f0f0;
-}
-
-.chat-input {
-    display: flex;
-    padding: 15px;
-    border-top: 1px solid #ddd;
-}
-
-.chat-input input {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-.chat-input button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.chat-input button:hover {
-    background-color: #367c39;
-}
+    <script src="script.js"></script>
+</body>
+</html>
