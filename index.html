@@ -6,17 +6,16 @@
   <link rel="stylesheet" href="style.css">
   <!-- Responsive Design Meta Tag -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Canvas Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body>
 
   <div class="container">
     <!-- Question Container -->
     <div id="question-container">
-      <h1 id="question">Hey there!</h1>
-      <p id="prompt">I have something to ask you...</p>
-
-      <!-- Image (Optional) -->
-      <!-- <img src="your-image.jpg" alt="Us" class="personal-photo"> -->
+      <h1 id="question" aria-live="polite">Hey there!</h1>
+      <p id="prompt" aria-live="polite">I have something to ask you...</p>
 
       <div id="buttons">
         <button class="btn" id="yesBtn">Yes</button>
